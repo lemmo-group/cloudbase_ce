@@ -6,4 +6,3 @@ export 'cache.dart';
 export 'customAuth.dart';
 export 'index.dart';
 export 'interface.dart';
-export 'wxAuth.dart';

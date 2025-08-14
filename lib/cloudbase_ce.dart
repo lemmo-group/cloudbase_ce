@@ -8,11 +8,5 @@
 library cloudbase_ce;
 
 export 'cloudbase_core/lib.dart';
-
-export 'cloudbase_storage/lib.dart';
-
 export 'cloudbase_auth/lib.dart';
-
-export 'cloudbase_function/lib.dart';
-
 export 'cloudbase_database/lib.dart';

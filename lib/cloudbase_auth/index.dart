@@ -5,7 +5,6 @@ import 'dart:async';
 import 'package:cloudbase_ce/cloudbase_ce.dart';
 
 class CloudBaseAuth extends AuthProvider {
-  WxAuthProvider? _wxAuthProvider;
   CustomAuthProvider? _customAuthProvider;
   AnonymousAuthProvider? _anonymousAuthProvider;
 
@@ -23,19 +22,6 @@ class CloudBaseAuth extends AuthProvider {
     return _cache.putIfAbsent(envId, () {
       return CloudBaseAuth._internal(core);
     });
-  }
-
-  /// 微信登录
-  Future<CloudBaseAuthState> signInByWx(
-      {required String wxAppId, required String wxUniLink}) async {
-    if (_wxAuthProvider == null) {
-      _wxAuthProvider = WxAuthProvider(super.core);
-    }
-
-    CloudBaseAuthState authState =
-        await _wxAuthProvider!.signInByWx(wxAppId, wxUniLink);
-
-    return authState;
   }
 
   /// 自定义登录
