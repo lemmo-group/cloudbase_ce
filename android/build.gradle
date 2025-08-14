@@ -27,6 +27,8 @@ allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace "com.cloudbase.cloudbase_ce"
+    
     compileSdkVersion 28
 
     defaultConfig {
